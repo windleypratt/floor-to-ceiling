@@ -1,5 +1,5 @@
 ---
-title: "std Visualized: Floor and Ceiling"
+title: "PPR Visualized: Floor and Ceiling"
 output: html_notebook
 ---
 ```{r echo= FALSE, message = FALSE, warning=FALSE}
@@ -25,40 +25,40 @@ library(tidyr)
 scoringPeriodId <- 1
 
 # Pull Top 600 From ESPN
-week1.1 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128",sep=""), 
+week1.1 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week1.2 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=50",sep=""), 
+week1.2 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=50",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week1.3 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=100",sep=""), 
+week1.3 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=100",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week1.4 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=150",sep=""), 
+week1.4 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=150",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week1.5 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=200",sep=""), 
+week1.5 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=200",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week1.6 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=250",sep=""), 
+week1.6 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=250",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week1.7 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=300",sep=""), 
+week1.7 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=300",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week1.8 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=350",sep=""), 
+week1.8 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=350",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week1.9 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=400",sep=""), 
+week1.9 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=400",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week1.10 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=450",sep=""), 
+week1.10 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=450",sep=""), 
                            which = 2, 
                            skip.rows = 1)
-week1.11 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=500",sep=""), 
+week1.11 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=500",sep=""), 
                            which = 2, 
                            skip.rows = 1)
-week1.12 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=550",sep=""), 
+week1.12 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=550",sep=""), 
                            which = 2, 
                            skip.rows = 1)
 week1 <- rbind(week1.1,week1.2,week1.3,week1.4,week1.5,week1.6,week1.7,week1.8,week1.9,week1.10)
@@ -83,40 +83,40 @@ week1 <- separate(data=week1, col = `TEAM.POS`, into = c("TEAM","POS","HEALTH"),
 scoringPeriodId <- 2
 
 # Pull Top 600 From ESPN
-week2.1 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128",sep=""), 
+week2.1 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week2.2 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=50",sep=""), 
+week2.2 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=50",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week2.3 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=100",sep=""), 
+week2.3 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=100",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week2.4 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=150",sep=""), 
+week2.4 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=150",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week2.5 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=200",sep=""), 
+week2.5 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=200",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week2.6 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=250",sep=""), 
+week2.6 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=250",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week2.7 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=300",sep=""), 
+week2.7 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=300",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week2.8 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=350",sep=""), 
+week2.8 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=350",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week2.9 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=400",sep=""), 
+week2.9 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=400",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week2.10 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=450",sep=""), 
+week2.10 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=450",sep=""), 
                            which = 2, 
                            skip.rows = 1)
-week2.11 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=500",sep=""), 
+week2.11 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=500",sep=""), 
                            which = 2, 
                            skip.rows = 1)
-week2.12 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=550",sep=""), 
+week2.12 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=550",sep=""), 
                            which = 2, 
                            skip.rows = 1)
 week2 <- rbind(week2.1,week2.2,week2.3,week2.4,week2.5,week2.6,week2.7,week2.8,week2.9,week2.10)
@@ -139,40 +139,40 @@ week2 <- separate(data=week2, col = `TEAM.POS`, into = c("TEAM","POS","HEALTH"),
 scoringPeriodId <- 3
 
 # Pull Top 600 From ESPN
-week3.1 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128",sep=""), 
+week3.1 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week3.2 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=50",sep=""), 
+week3.2 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=50",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week3.3 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=100",sep=""), 
+week3.3 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=100",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week3.4 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=150",sep=""), 
+week3.4 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=150",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week3.5 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=200",sep=""), 
+week3.5 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=200",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week3.6 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=250",sep=""), 
+week3.6 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=250",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week3.7 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=300",sep=""), 
+week3.7 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=300",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week3.8 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=350",sep=""), 
+week3.8 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=350",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week3.9 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=400",sep=""), 
+week3.9 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=400",sep=""), 
                           which = 2, 
                           skip.rows = 1)
-week3.10 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=450",sep=""), 
+week3.10 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=450",sep=""), 
                            which = 2, 
                            skip.rows = 1)
-week3.11 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=500",sep=""), 
+week3.11 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=500",sep=""), 
                            which = 2, 
                            skip.rows = 1)
-week3.12 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1837128&startIndex=550",sep=""), 
+week3.12 <- readHTMLTable(paste("http://games.espn.go.com/ffl/leaders?&scoringPeriodId=",scoringPeriodId,"&seasonId=2017&leagueId=1002951&startIndex=550",sep=""), 
                            which = 2, 
                            skip.rows = 1)
 week3 <- rbind(week3.1,week3.2,week3.3,week3.4,week3.5,week3.6,week3.7,week3.8,week3.9,week3.10)
@@ -264,7 +264,7 @@ stats$Games <- snapCount$Games[match(stats$PLAYER, snapCount$Player)]
 
 # NA to Zero
 
-stats[,5:6][is.na(stats[,5:6])] <- 0
+stats[,5:7][is.na(stats[,5:7])] <- 0
 
 stats <- stats %>%
   #rowwise will make sure the sum operation will occur on each row
@@ -297,10 +297,10 @@ stats$Cons <- ifelse(stats$CoV < .1, TRUE, FALSE)
 
 # Separate Positions
 
-stdRB <- sqldf("select * from stats WHERE POS is 'RB' and PPG >0 and HEALTH is not 'IR'")
-stdWR <- sqldf("select * from stats WHERE POS is 'WR' and PPG >0 and HEALTH is not 'IR'")
-stdTE <- sqldf("select * from stats WHERE POS is 'TE' and PPG >0 and HEALTH is not 'IR'")
-stdQB <- sqldf("select * from stats WHERE POS is 'QB' and PPG >0 and HEALTH is not 'IR'")
+pprRB <- sqldf("select * from stats WHERE POS is 'RB' and PPG >0 and HEALTH is not 'IR'")
+pprWR <- sqldf("select * from stats WHERE POS is 'WR' and PPG >0 and HEALTH is not 'IR'")
+pprTE <- sqldf("select * from stats WHERE POS is 'TE' and PPG >0 and HEALTH is not 'IR'")
+pprQB <- sqldf("select * from stats WHERE POS is 'QB' and PPG >0 and HEALTH is not 'IR'")
 
 
 ```
@@ -310,61 +310,61 @@ stdQB <- sqldf("select * from stats WHERE POS is 'QB' and PPG >0 and HEALTH is n
 
 ## RBs
 set.seed(20)
-stdRBCluster <- kmeans(stdRB[, 11:12], 10, nstart = 20)
-stdRB$Cluster <- as.numeric(as.character(stdRBCluster$cluster))
+pprRBCluster <- kmeans(pprRB[, 11:12], 10, nstart = 20)
+pprRB$Cluster <- as.numeric(as.character(pprRBCluster$cluster))
 
 # The clusters are created but are not in any order. We need to fix that. Calculate the avg. PPG of your clusters.
-tierAvg <- as.data.frame(tapply(as.numeric(as.character(stdRB$PPG)),stdRB$Cluster, mean))
+tierAvg <- as.data.frame(tapply(as.numeric(as.character(pprRB$PPG)),pprRB$Cluster, mean))
 # Sort and label clusters
 tierAvg <- tierAvg[ order (-tierAvg[,1]),]
 tierAvg <- as.data.frame(tierAvg)
 tierAvg$Tier <- row(tierAvg)
-stdRB$Tier <- as.factor(tierAvg$Tier[match(stdRB$Cluster, rownames(tierAvg))])
+pprRB$Tier <- as.factor(tierAvg$Tier[match(pprRB$Cluster, rownames(tierAvg))])
 
 ############################################################
 
 ## WRs
 set.seed(20)
-stdWRCluster <- kmeans(stdWR[, 11:12], 15, nstart = 20)
-stdWR$Cluster <- as.numeric(as.character(stdWRCluster$cluster))
+pprWRCluster <- kmeans(pprWR[, 11:12], 15, nstart = 20)
+pprWR$Cluster <- as.numeric(as.character(pprWRCluster$cluster))
 
 # The clusters are created but are not in any order. We need to fix that. Calculate the avg. PPG of your clusters.
-tierAvg <- as.data.frame(tapply(as.numeric(as.character(stdWR$PPG)),stdWR$Cluster, mean))
+tierAvg <- as.data.frame(tapply(as.numeric(as.character(pprWR$PPG)),pprWR$Cluster, mean))
 # Sort and label clusters
 tierAvg <- tierAvg[ order (-tierAvg[,1]),]
 tierAvg <- as.data.frame(tierAvg)
 tierAvg$Tier <- row(tierAvg)
-stdWR$Tier <- as.factor(tierAvg$Tier[match(stdWR$Cluster, rownames(tierAvg))])
+pprWR$Tier <- as.factor(tierAvg$Tier[match(pprWR$Cluster, rownames(tierAvg))])
 
 ############################################################
 
 ## TEs
 set.seed(20)
-stdTECluster <- kmeans(stdTE[, 11:12], 15, nstart = 20)
-stdTE$Cluster <- as.numeric(as.character(stdTECluster$cluster))
+pprTECluster <- kmeans(pprTE[, 11:12], 15, nstart = 20)
+pprTE$Cluster <- as.numeric(as.character(pprTECluster$cluster))
 
 # The clusters are created but are not in any order. We need to fix that. Calculate the avg. PPG of your clusters.
-tierAvg <- as.data.frame(tapply(as.numeric(as.character(stdTE$PPG)),stdTE$Cluster, mean))
+tierAvg <- as.data.frame(tapply(as.numeric(as.character(pprTE$PPG)),pprTE$Cluster, mean))
 # Sort and label clusters
 tierAvg <- tierAvg[ order (-tierAvg[,1]),]
 tierAvg <- as.data.frame(tierAvg)
 tierAvg$Tier <- row(tierAvg)
-stdTE$Tier <- as.factor(tierAvg$Tier[match(stdTE$Cluster, rownames(tierAvg))])
+pprTE$Tier <- as.factor(tierAvg$Tier[match(pprTE$Cluster, rownames(tierAvg))])
 
 ############################################################
 
 ## QBs
 set.seed(20)
-stdQBCluster <- kmeans(stdQB[, 11:12], 15, nstart = 20)
-stdQB$Cluster <- as.numeric(as.character(stdQBCluster$cluster))
+pprQBCluster <- kmeans(pprQB[, 11:12], 15, nstart = 20)
+pprQB$Cluster <- as.numeric(as.character(pprQBCluster$cluster))
 
 # The clusters are created but are not in any order. We need to fix that. Calculate the avg. PPG of your clusters.
-tierAvg <- as.data.frame(tapply(as.numeric(as.character(stdQB$PPG)),stdQB$Cluster, mean))
+tierAvg <- as.data.frame(tapply(as.numeric(as.character(pprQB$PPG)),pprQB$Cluster, mean))
 # Sort and label clusters
 tierAvg <- tierAvg[ order (-tierAvg[,1]),]
 tierAvg <- as.data.frame(tierAvg)
 tierAvg$Tier <- row(tierAvg)
-stdQB$Tier <- as.factor(tierAvg$Tier[match(stdQB$Cluster, rownames(tierAvg))])
+pprQB$Tier <- as.factor(tierAvg$Tier[match(pprQB$Cluster, rownames(tierAvg))])
 
 
 ```
@@ -374,15 +374,15 @@ stdQB$Tier <- as.factor(tierAvg$Tier[match(stdQB$Cluster, rownames(tierAvg))])
 
 # Plot ALL the things!
 
-plot_ly(stdRB, x= ~Floor, y = ~Ceiling, type = 'scatter', mode = 'markers', color = ~Tier, colors = "Set1", text = ~paste(PLAYER, "<br>", "Floor: ", round(Floor,digits = 2),"<br>", "Ceiling: ", round(Ceiling, digits = 2),"<br>", "Average: ", round(as.numeric(PPG), digits = 2), "<br>", Tier)) %>%
+plot_ly(pprRB, x= ~Floor, y = ~Ceiling, type = 'scatter', mode = 'markers', color = ~Tier, colors = "Set1", text = ~paste(PLAYER, "<br>", "Floor: ", round(Floor,digits = 2),"<br>", "Ceiling: ", round(Ceiling, digits = 2),"<br>", "Average: ", round(as.numeric(PPG), digits = 2), "<br>", Tier)) %>%
   layout(title = ~POS)
 
-plot_ly(stdWR, x= ~Floor, y = ~Ceiling, type = 'scatter', mode = 'markers', color = ~Tier,colors = "Set1", text = ~paste(PLAYER, "<br>", "Floor: ", round(Floor,digits = 2),"<br>", "Ceiling: ", round(Ceiling, digits = 2),"<br>", "Average: ", round(as.numeric(PPG), digits = 2), "<br>", Tier), title="WRs") %>%
+plot_ly(pprWR, x= ~Floor, y = ~Ceiling, type = 'scatter', mode = 'markers', color = ~Tier,colors = "Set1", text = ~paste(PLAYER, "<br>", "Floor: ", round(Floor,digits = 2),"<br>", "Ceiling: ", round(Ceiling, digits = 2),"<br>", "Average: ", round(as.numeric(PPG), digits = 2), "<br>", Tier), title="WRs") %>%
   layout(title = ~POS)
 
-plot_ly(stdTE, x= ~Floor, y = ~Ceiling, type = 'scatter', mode = 'markers', color = ~Tier,colors = "Set1", text = ~paste(PLAYER, "<br>", "Floor: ", round(Floor,digits = 2),"<br>", "Ceiling: ", round(Ceiling, digits = 2),"<br>", "Average: ", round(as.numeric(PPG), digits = 2), "<br>", Tier), title="WRs") %>%
+plot_ly(pprTE, x= ~Floor, y = ~Ceiling, type = 'scatter', mode = 'markers', color = ~Tier,colors = "Set1", text = ~paste(PLAYER, "<br>", "Floor: ", round(Floor,digits = 2),"<br>", "Ceiling: ", round(Ceiling, digits = 2),"<br>", "Average: ", round(as.numeric(PPG), digits = 2), "<br>", Tier), title="WRs") %>%
   layout(title = ~POS)
 
-plot_ly(stdQB, x= ~Floor, y = ~Ceiling, type = 'scatter', mode = 'markers', color = ~Tier,colors = "Set1", text = ~paste(PLAYER, "<br>", "Floor: ", round(Floor,digits = 2),"<br>", "Ceiling: ", round(Ceiling, digits = 2),"<br>", "Average: ", round(as.numeric(PPG), digits = 2), "<br>", Tier), title="WRs") %>%
+plot_ly(pprQB, x= ~Floor, y = ~Ceiling, type = 'scatter', mode = 'markers', color = ~Tier,colors = "Set1", text = ~paste(PLAYER, "<br>", "Floor: ", round(Floor,digits = 2),"<br>", "Ceiling: ", round(Ceiling, digits = 2),"<br>", "Average: ", round(as.numeric(PPG), digits = 2), "<br>", Tier), title="WRs") %>%
   layout(title = ~POS)
 ```
