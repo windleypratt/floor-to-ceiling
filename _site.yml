@@ -3,7 +3,7 @@ output_dir: "."
 navbar:
   title: "Fantasy Stat Guide"
   left:
-    - text: "Home"
-      href: index.nb.html
-    - text: "About"
-      href: about.nb.html
+    - text: "PPR"
+      href: PPR.nb.html
+    - text: "Standard"
+      href: Standard.nb.html
