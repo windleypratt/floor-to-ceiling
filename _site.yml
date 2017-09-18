@@ -1,0 +1,9 @@
+name: "Visualized Floor to Ceiling Ratios, PPR"
+output_dir: "."
+navbar:
+  title: "Fantasy Stat Guide"
+  left:
+    - text: "Home"
+      href: index.nb.html
+    - text: "About"
+      href: about.nb.html
