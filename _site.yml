@@ -4,6 +4,6 @@ navbar:
   title: "Fantasy Stat Guide"
   left:
     - text: "PPR"
-      href: PPR.nb.html
+      href: ppr.html
     - text: "Standard"
-      href: Standard.nb.html
+      href: standard.html

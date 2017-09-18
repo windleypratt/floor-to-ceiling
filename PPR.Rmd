@@ -1,6 +1,6 @@
 ---
-title: "PPR Visualized: Floor and Ceiling"
-output: html_notebook
+title: "Visualized: Floor and Ceiling, PPR"
+output: html_document
 ---
 ```{r echo= FALSE, message = FALSE, warning=FALSE}
 # Load Required Libraries
